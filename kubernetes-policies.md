@@ -64,4 +64,4 @@ vmem_req_incr(16 mb).
 rate_of_resize(3).
 max_obs_period(30 days).
 min_obs_period(1 days).
-```
+````
