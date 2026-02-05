@@ -4,7 +4,7 @@
 `User defined` policies override `default` policy.<br/>
 When `user defined` policies are in conflict, `the most conservative` policy setting wins.<br/>
 
-Automatically generated policies, also known as `imported` are between `default` and `user defned` policies.<br/>
+`Automatically generated` policies, also known as `imported` policies are between `default` and `user defned` policies in policy hierarchy.<br/>
 
 ***Namespace tags***<br/>
 Turbonomic tags are k8s labels or annotations.<br/>
