@@ -9,7 +9,7 @@ Configure `default policy` for `recommended` actions mode.<br/>
 Configure `namespace scoped` policy for `automatic` actions mode.<br/>
 Configure `workload scoped` policy for `manual/recommended` actions mode.<br/>
 
-***Automation for specific workload without namespace scope***
+***Automation for specific workload without namespace scope***<br/>
 If workload namespace is not targeted for automation, configure workload-scoped policy for automatic/manual/recommended actions.<br/>
 
 ***Turbonomic containers supply chain.***
