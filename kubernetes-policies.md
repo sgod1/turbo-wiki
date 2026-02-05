@@ -1,4 +1,4 @@
-**Container resize and move actions.**<br/>
+**Container resize actions.**<br/>
 
 **Policy hierarchy.**<br/>
 `User defined` policies override `default` policy.<br/>
