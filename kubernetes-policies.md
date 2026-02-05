@@ -1,7 +1,7 @@
 **Container resize and move actions.**<br/>
 
 **Policy hierarchy.**<br/>
-`User defined` policies override `default` policy.<br/>fff
+`User defined` policies override `default` policy.<br/>
 When `user defined` policies are in conflict, `the most conservative` policy setting wins.<br/>
 
 ***Automation at the namespace and workload level***<br/>
