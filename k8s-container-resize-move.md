@@ -6,8 +6,12 @@ When `user defined` policies are in conflict, `the most conservative` policy set
 
 Automatically generated policies, also known as `imported` are between `default` and `user defned` policies.<br/>
 
+***Namespace tags***<br/>
+Turbonomic tags are k8s labels or annotations.<br/>
+Annotation tags are not enabled by default, and must be explicetly enabled in Turbonomic.<br/>
+
 ***Automation at the namespace and workload level***<br/>
-Configure `default policy` for `recommended` actions mode.<br/>
+Configure `default policy` with `recommended` actions mode.<br/>
 Configure `namespace scoped` policy for `automatic` actions mode.<br/>
 Configure `workload scoped` policy for `manual/recommended` actions mode.<br/>
 
@@ -21,7 +25,7 @@ container -> container-pod -> namespace -> container-platform
 ````
 
 ***Configure `container resize` actions.***</br>
-`Container-spec` entity sets parameters for container `resize` actions.<br/>
+`Container-spec` entity sets parameters for container `resize` action generation.<br/>
 `Workload-controller` entity sets action execution mode for resize actions.<br/>
 
 ***Example: configure resize actions at the namespace scope***</br>
@@ -31,7 +35,7 @@ Create label or annotation on the namespace to use as Turbonomic tag.<br/>
 Create `container-spec` group and scope it to the namespace with the `namespace-tag` tag.<br/>
 Create `container-spec` policy scoped to this group and define capacity and scaling parameters.<br/>
 
-Configure `workload-controller default` policy with recommended actions mode.<br/>
+Configure `workload-controller default` policy with `recommended` actions mode.<br/>
 Create `workload-controller` group and scope it to the namespace with the `namespace-tag` tag.<br/>
 Create `workload-controller` policy scoped to this group and set `resize` action generation mode.<br/>
 
@@ -73,3 +77,7 @@ min_obs_period(1 days).
 
 `container-pod` policy is scoped to a group of `container-pods`.<br/>
 
+There is a lot of flexibility how `container-pod` group can be defined.<br/>
+
+***Example: Configure `move` action at the `namespace` scope.<br/>
+Configure `default move` policy wih `recommended` action mode.<br/>
