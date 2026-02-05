@@ -7,8 +7,8 @@ When `user defined` policies are in conflict, `the most conservative` policy set
 `Automatically generated` policies, also known as `imported` policies are between `default` and `user defned` policies in policy hierarchy.<br/>
 
 ***Namespace tags***<br/>
-Turbonomic tags are k8s labels or annotations.<br/>
-Annotation tags are not enabled by default, and must be explicetly enabled in Turbonomic.<br/>
+Turbonomic tags are k8s `labels` or `annotations`.<br/>
+Annotation tags must be explicetly enabled if needed.<br/>
 
 ***Automation at the namespace and workload level***<br/>
 Configure `default policy` with `recommended` actions mode.<br/>
