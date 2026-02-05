@@ -12,7 +12,7 @@ Annotation tags must be explicetly enabled if needed.<br/>
 
 ***Automation at the namespace and workload level***<br/>
 Configure `default policy` with `recommended` actions mode.<br/>
-`Enable action automation` at the namespace scope: Configure `namespace scoped` policy for `automatic` actions mode.<br/>
+`Enable action automation`: Configure `namespace scoped` policy for `automatic` actions mode.<br/>
 `Automation opt-out`: Configure `workload scoped` `opt-out` policy for `manual/recommended` actions mode.<br/>
 
 ***Automation for specific workload without namespace scope***<br/>
@@ -37,7 +37,7 @@ Create `container-spec` policy scoped to this group and define capacity and scal
 
 Configure `workload-controller default` policy with `recommended` actions mode.<br/>
 Create `workload-controller` group and scope it to the namespace with the `namespace-tag` tag.<br/>
-`Enable resize action automation` at the namespace scope: Create `workload-controller` policy scoped to this group and set `resize` action generation mode to `automatic`.<br/>
+`Enable resize action automation`: Create `workload-controller` policy scoped to this group and set `resize` action generation mode to `automatic`.<br/>
 `Automation opt-out`: Create one or more `opt-out` `workload-controller` policies with namespace sub-scopes and set `resize` action generation mode to `manual|recommended`.<br/>
 
 ***`Container-spec` capacity settings.***<br/>
@@ -81,6 +81,6 @@ min_obs_period(1 days).
 ***Example: Configure `move` action at the `namespace` scope.***<br/>
 `Container pod Defaults` policy sets `move` action generation mode is set to `manual`.<br/>
 Create `container-pod` group and scope it to the `namespace-tag` tag.<br/>
-`Enable move action autmation` at the namespace scope: Create `container-pod` policy scoped to this group and set `move` action generation mode to `automatic`.<br/>
+`Enable move action autmation`: Create `container-pod` policy scoped to this group and set `move` action generation mode to `automatic`.<br/>
 `Automation opt-out`: Create one or more `container pod` `opt-out` policies with action generation mode set to `manual|recommended`<br/>
 
