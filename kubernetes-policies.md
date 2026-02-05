@@ -4,6 +4,8 @@
 `User defined` policies override `default` policy.<br/>
 When `user defined` policies are in conflict, `the most conservative` policy setting wins.<br/>
 
+Automatically generated policies, also known as `imported` are between `default` and `user defned` policies.<br/>
+
 ***Automation at the namespace and workload level***<br/>
 Configure `default policy` for `recommended` actions mode.<br/>
 Configure `namespace scoped` policy for `automatic` actions mode.<br/>
