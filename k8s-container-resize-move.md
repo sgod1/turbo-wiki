@@ -51,6 +51,13 @@ Create `workload-controller` group and scope it to the namespace with the `names
 `Enable resize action automation`: Create `workload-controller` policy scoped to this group and set `resize` action generation mode to `automatic`.<br/>
 `Automation opt-out`: Create one or more `opt-out` `workload-controller` policies with namespace sub-scopes and set `resize` action generation mode to `manual|recommended`.<br/>
 
+```
+container-spec default policy for analysis and scaling
+  container-spec user defined policy for analysis and scaling
+    workload-controller default policy: opt-in for resize action automation
+      workload-controller user defined policy: out-out of automation with manual mode resize actions
+```
+
 ***`Container-spec` analysis settings.***<br/>
 ````
 analysis('container-spec', vcpu_lim, [500 mcores, 6400 mcores], target_util_midpoint(70%)).
