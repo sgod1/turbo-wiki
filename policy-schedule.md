@@ -3,4 +3,6 @@
 `User defined` automation policies support `policy enforcement` and `action execution` schedules.<br/>
 
 ***Policy Enforcement Schedule***<br/>
-Set the window of time when the policy is in effect.<br/>
+Modify operational and scaling constraints for a period of time.<br/>
+
+For `containers` this type of schedule is attached to `container-spec` policies and affect analysis properties for `resize` actions generation.<br/>
