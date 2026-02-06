@@ -14,6 +14,7 @@ If affects a period of time when `resize` action execution mode defined in the p
 When schedule is attached to `container-pod` policy, it is `action execution` schedule.<br/>
 If affects a period of time when `move` action execution mode defined in the policy is in effect.<br/>
 
+***Example policy-enforcement and action execution schedules for container resize***<br/>
 ```
 [<----- policy enforcement schedule for container-spec analysis and scaling policy (monthly) ---------->]
 [<- action execution schedule for workload-controller resize actions (daily)->] [<- daily ->] [<-daily->]
