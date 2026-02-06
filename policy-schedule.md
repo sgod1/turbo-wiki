@@ -12,8 +12,8 @@ When schedule is attached to `container-pod` policy, it is `action execution` sc
 If affects a period of time when `move` action execution mode defined in the policy is in effect.<br/>
 
 ```
-[<----- monthly policy enforcement schedule for container-spec analysis and scaling policy ---->]
-[<- daily action execution schedule for resize actions ->] [<- daily ->] [<-daily->]
+[<----- policy enforcement schedule for container-spec analysis and scaling policy (monthly) ---------->]
+[<- action execution schedule for workload-controller resize actions (daily)->] [<- daily ->] [<-daily->]
 ```
 
 `Scheduled` policies take precedence over policies with no schedule.<br/>
