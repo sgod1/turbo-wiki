@@ -35,8 +35,8 @@ Confgure `workload-controller default` policy for `automatic` resize action exec
 
 ```
 container-spec default policy for analysis and scaling
-workload-controller default policy: opt-in for resize action automation
-workload-controller user defined policy: out-out of automation with manual mode resize actions
+  workload-controller default policy: opt-in for resize action automation
+    workload-controller user defined policy: out-out of automation with manual mode resize actions
 ```
 
 ***Example: configure resize actions at the namespace scope***</br>
