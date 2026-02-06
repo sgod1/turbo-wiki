@@ -58,7 +58,7 @@ container-spec default policy for analysis and scaling
       workload-controller user defined policy: out-out of automation with manual mode resize actions
 ```
 
-***`Container-spec` analysis settings.***<br/>
+***`Container-spec` analysis properties.***<br/>
 ````
 analysis('container-spec', vcpu_lim, [500 mcores, 6400 mcores], target_util_midpoint(70%)).
 resize_below_min(vcpu_lim, recommended).
