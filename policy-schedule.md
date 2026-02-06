@@ -1,4 +1,4 @@
-**Automation Policy Schedule***</br/>
+**Automation Policy Schedule**</br/>
 
 `User defined` automation policies support `policy enforcement` and `action execution` schedules.<br/>
 
