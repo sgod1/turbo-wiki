@@ -31,12 +31,12 @@ container -> container-pod -> namespace -> container-platform
 ***Example: configure resize actions at the namespace scope***<br/>
 Configure `container-spec default` policy for analysis and scaling.<br/>
 Confgure `workload-controller default` policy for `automatic` resize action execution.<br/>
-`Automation opt-out`: Configure user defined `workload-controller` policy for `manual` resize action execution.<br/>
+`Automation opt-out`: Scope user defined `workload-controller` policy by `namespace-tag` for `manual` resize action execution.<br/>
 
 ```
 container-spec default policy for analysis and scaling
 workload-controller default policy: opt-in for resize action automation
-workload-controller user defined policy: out-out of automation with manual resize actions
+workload-controller user defined policy: out-out of automation with manual mode resize actions
 ```
 
 ***Example: configure resize actions at the namespace scope***</br>
