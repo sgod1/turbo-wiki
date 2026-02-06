@@ -1,5 +1,7 @@
 **Automation Policy Schedule**<br/>
 
+`Scheduled` policies take precedence over policies with no schedule.<br/>
+
 `User defined` automation policies support `policy enforcement` and `action execution` schedules.<br/>
 
 When a schedule is attached to `container-spec` policy, it is `policy enforcement` schedule.<br/>
@@ -15,5 +17,3 @@ If affects a period of time when `move` action execution mode defined in the pol
 [<----- policy enforcement schedule for container-spec analysis and scaling policy (monthly) ---------->]
 [<- action execution schedule for workload-controller resize actions (daily)->] [<- daily ->] [<-daily->]
 ```
-
-`Scheduled` policies take precedence over policies with no schedule.<br/>
