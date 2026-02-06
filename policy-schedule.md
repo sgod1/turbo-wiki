@@ -15,3 +15,5 @@ If affects a period of time when `move` action execution mode defined in the pol
 [<----- monthly policy enforcement schedule for container-spec policy analysis and scaling settings ---->]
 [<- daily action execution schedule for resize and move actions ->] [<- daily ->] [<-daily->]
 ```
+
+`Scheduled` policies take precedence over policies with no schedule.<br/>
