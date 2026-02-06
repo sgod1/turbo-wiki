@@ -28,8 +28,19 @@ container -> container-pod -> namespace -> container-platform
 `Container-spec` entity sets parameters for container `resize` action generation.<br/>
 `Workload-controller` entity sets action execution mode for resize actions.<br/>
 
+***Example: configure resize actions at the namespace scope***<br/>
+Configure `container-spec default` policy analysis and scaling.<br/>
+Confgure `workload-controller default` policy for `automatic` resize action execution.<br/>
+`Automation opt-out`: Configure user defined `workload-controller` policy for `manual` resize action execution.<br/>
+
+```
+container-spec default policy for analysis and scaling
+workload-controller default policy: opt-in for resize action automation
+workload-controll user defined policy: out-out of automation with manual resize actions
+```
+
 ***Example: configure resize actions at the namespace scope***</br>
-Configure `container-spec default` policy capacity and scaling.<br/>
+Configure `container-spec default` policy analysis and scaling.<br/>
 
 Create label or annotation on the namespace to use as Turbonomic tag.<br/>
 Create `container-spec` group and scope it to the namespace with the `namespace-tag` tag.<br/>
