@@ -29,7 +29,7 @@ container -> container-pod -> namespace -> container-platform
 `Workload-controller` entity sets action execution mode for resize actions.<br/>
 
 ***Example: configure resize actions at the namespace scope***<br/>
-Configure `container-spec default` policy analysis and scaling.<br/>
+Configure `container-spec default` policy for analysis and scaling.<br/>
 Confgure `workload-controller default` policy for `automatic` resize action execution.<br/>
 `Automation opt-out`: Configure user defined `workload-controller` policy for `manual` resize action execution.<br/>
 
