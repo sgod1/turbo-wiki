@@ -40,21 +40,21 @@ Create `workload-controller` group and scope it to the namespace with the `names
 `Enable resize action automation`: Create `workload-controller` policy scoped to this group and set `resize` action generation mode to `automatic`.<br/>
 `Automation opt-out`: Create one or more `opt-out` `workload-controller` policies with namespace sub-scopes and set `resize` action generation mode to `manual|recommended`.<br/>
 
-***`Container-spec` capacity settings.***<br/>
+***`Container-spec` analysis settings.***<br/>
 ````
-capacity('container-spec', vcpu_lim, [500 mcores, 6400 mcores], target_util_midpoint(70%)).
+analysis('container-spec', vcpu_lim, [500 mcores, 6400 mcores], target_util_midpoint(70%)).
 resize_below_min(vcpu_lim, recommended).
 resize_above_max(vcpu_lim, recommended).
 
-capacity('container-spec', vcpu_req, [10 mcores, 6400 mcores], target_util_midpoint(110%)).
+analysis('container-spec', vcpu_req, [10 mcores, 6400 mcores], target_util_midpoint(110%)).
 resize_below_min(vcpu_req, recommended).
 resize_above_max(vcpu_req, recommended).
 
-capacity('container-spec', vmem_lim, [10 mb,1048576 mb], target_util_midpoint(70%)).
+analysis('container-spec', vmem_lim, [10 mb,1048576 mb], target_util_midpoint(70%)).
 resize_below_min(vmem_lim, recommended).
 resize_above_max(vmem_lim, recommended).
 
-capacity('container-spec', vmem_req, [10 mb,1048576 mb], target_util_midpoint(110%)).
+analysis('container-spec', vmem_req, [10 mb,1048576 mb], target_util_midpoint(110%)).
 resize_below_min(vmem_req, recommended).
 resize_above_max(vmem_req, recommended).
 
