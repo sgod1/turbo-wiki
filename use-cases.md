@@ -1,8 +1,6 @@
 **Use cases for container workloads on k8s clusters**<br/>
 
 **Case 1**<br/>
-Container spec policies.<br/>
-Resize actions policies.<br/>
 
 Take automated actions at multi-cluster scope.<br/>
 Opt out of automation actions at namespace level.<br/>
