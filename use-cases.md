@@ -40,3 +40,8 @@ workload-controller user defined policy:
   scope: group of specific workloads
   schedule: action execution schedule
 ```
+
+**Case 3**<br/>
+
+Turbonomic api's.<br/>
+
