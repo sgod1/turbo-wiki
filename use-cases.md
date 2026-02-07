@@ -8,6 +8,7 @@ Take `automated` actions at `multi-cluster` scope.<br/>
 Scheduled policies take precedence over policies with no schedule.<br/>
 To avoid unexpected results, attach schedule to user defined policies.<br/>
 
+***Container resize actions***</br>
 ```
 // default action generation mode: recommend/manual
 workload-controller default policy
@@ -25,6 +26,8 @@ workload-controller user-defined policy
   scope: group of workload controllers by namespace tag
   schedule: action execution schedule
 ```
+
+***Container move actions***<br/>
 
 **Case 2**<br/>
 
