@@ -3,7 +3,7 @@
 **Case 1**<br/>
 
 Take `automated` actions at `multi-cluster` scope.<br/>
-`Opt out of automation` at namespace level.<br/>
+`Opt out of automation` at `namespace` level.<br/>
 
 Scheduled policies take precedence over policies with no schedule.<br/>
 To avoid unexpected results, attach schedule to user defined policies.<br/>
