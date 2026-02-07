@@ -11,7 +11,7 @@ To avoid unexpected results, attach schedule to user defined policies.<br/>
 ***Container resize actions***</br>
 ```
 // default action generation mode: recommend/manual
-workload-controller default policy
+*workload-controller* default policy
   action generation mode: recommend/manual
 
 // setup automation at multi-cluster scope
