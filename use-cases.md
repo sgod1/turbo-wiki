@@ -10,6 +10,11 @@ To avoid unexpected results, attach schedule to user defined policies.<br/>
 
 ***Container resize actions***</br>
 ```
+// container-spec policy: analysis and scaling
+container-spec default policy
+container-spec user defined policy
+  schedule: policy enforcement schedule
+
 // default action generation mode: recommend/manual
 workload-controller default policy
   action generation mode: recommend/manual
