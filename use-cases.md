@@ -56,6 +56,8 @@ container-pod user defined policy
 Take `manual` actions at multi-cluster scope.<br/>
 Automate selected workloads.<br/>
 
+***Container resize actions***<br/>
+
 ```
 // container-spec policy: analysis and scaling
 container-spec default policy
@@ -66,6 +68,17 @@ workload-controller default policy
   action generation mode: manual
 
 workload-controller user defined policy:
+  action generation mode: automatic
+  scope: group of specific workloads
+  schedule: action execution schedule
+```
+
+***Container move actions***<br/>
+```
+container-pod default policy
+  action generation mode: manual
+
+container-pod user defined policy:
   action generation mode: automatic
   scope: group of specific workloads
   schedule: action execution schedule
