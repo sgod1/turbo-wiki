@@ -19,7 +19,7 @@ container-spec user defined policy
 workload-controller default policy
   action generation mode: recommend/manual
 
-// setup automation at multi-cluster scope
+// automation at multi-cluster scope
 workload-controller user-defined policy
   action generation mode: automatic
   scope: group of workload controllers filtered by one or more k8s clsuters
@@ -33,13 +33,35 @@ workload-controller user-defined policy
 ```
 
 ***Container move actions***<br/>
+```
+// default container-pod policy: manual/recommend
+contaier-pod default policy
+  action generation mode: manual/recommend
+
+// automation at multi-cluster scope
+container-pod user defined policy
+  action generation: automatic
+  scope: group of container-pods filtered by one or more k8s clusters
+  schedule: action execution schedule
+
+// opt out of automation at namespace level
+container-pod user defined policy
+  action generation mode: manual
+  scope: group of container-pods filtered by one or more k8s clusters
+  schedule: action execution schedule
+```
 
 **Case 2**<br/>
 
-Take manual actions at multi-cluster scope.<br/>
+Take `manual` actions at multi-cluster scope.<br/>
 Automate selected workloads.<br/>
 
 ```
+// container-spec policy: analysis and scaling
+container-spec default policy
+container-spec user defined policy
+  schedule: policy enforcement schedule
+
 workload-controller default policy
   action generation mode: manual
 
