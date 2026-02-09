@@ -86,5 +86,9 @@ container-pod user defined policy:
 
 **Case 3**<br/>
 
+***Deployment automaiton***</br>
+
+Container resize custom resource.<br/>
+
 Turbonomic api's.<br/>
 
