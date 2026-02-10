@@ -12,6 +12,7 @@ To avoid unexpected results, attach schedule to user defined policies.<br/>
 ```
 // container-spec policy: analysis and scaling
 container-spec default policy
+
 container-spec user defined policy
   schedule: policy enforcement schedule
 
@@ -61,6 +62,7 @@ Automate selected workloads.<br/>
 ```
 // container-spec policy: analysis and scaling
 container-spec default policy
+
 container-spec user defined policy
   schedule: policy enforcement schedule
 
