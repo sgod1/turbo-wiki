@@ -86,7 +86,7 @@ container-pod user defined policy:
   schedule: action execution schedule
 ```
 
-**Exclude clusters from policies, use different schedules**<br/>
+***Exclude clusters from policies, use different schedules***<br/>
 To exclude a cluster from workload-controller group add exclusion filter to group definition:<br/>
 Use group as a scope for automation policy and attach action execution schedule to a policy.<br/>
 ```
