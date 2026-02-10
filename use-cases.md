@@ -86,6 +86,30 @@ container-pod user defined policy:
   schedule: action execution schedule
 ```
 
+**Exclude clusters from policies, use different schedules**<br/>
+To exclude a cluster from workload-controller group add exclusion filter to group definition:<br/>
+Use group as a scope for automation policy and attach action execution schedule to a policy.<br/>
+```
+workload-controller group name: group1
+filter: regex eq .*test
+filter: not eq special_cluster_test
+
+workload-controller user defined policy:
+scope: group1
+schedule: action execution schedule 1
+```
+
+Create workload-controller group for excluded clsuter:
+Use group as a scope for automation policy and attach action execution schedule to a policy.<br/>
+```
+workload-controller group name: group2
+filter: eq special_cluster_test
+
+workload-controller user defined policy:
+scope: group2
+schedule: action execution schedule 2
+```
+
 **Case 3**<br/>
 
 ***Deployment automaiton***</br>
