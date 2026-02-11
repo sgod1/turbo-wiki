@@ -10,19 +10,19 @@
   ],
   "uuid": "string",
   "displayName": "api-group-container-spec",
-  "className": "string",
+  "className": "Group",
   "membersCount": 0,
   "entitiesCount": 0,
   "costPrice": 0,
-  "groupType": "string",
+  "groupType": "ContainerSpec",
   "severity": "UNKNOWN",
   "state": "UNKNOWN",
   "environmentType": "HYBRID",
   "scope": [
     "string"
   ],
-  "isStatic": true,
-  "logicalOperator": "string",
+  "isStatic": false,
+  "logicalOperator": "AND",
   "criteriaList": [
     {
       "expVal": "string",
