@@ -36,7 +36,7 @@ curl -X 'POST' \
 
 ```
 {
-  "uuid": "287472243165024",
+  "uuid": "287472263631520",
   "displayName": "api-group-container-spec-1",
   "className": "Group",
   "membersCount": 258,
