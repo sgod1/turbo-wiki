@@ -3,7 +3,7 @@
 **Create Group**</br>
 ```
 {
-  "displayName": "api-group-container-spec",
+  "displayName": "api-group-container-spec-1",
   "className": "Group",
   "groupType": "ContainerSpec",
   "environmentType": "HYBRID",
@@ -24,8 +24,10 @@
   "memberTypes": [
     "ContainerSpec"
   ],
+  "entityTypes": [
+    "ContainerSpec"
+  ],
   "groupOrigin": "USER",
-  "targetType": "string",
   "groupClassName": "GroupApiDTO"
 }
 
