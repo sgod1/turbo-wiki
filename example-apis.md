@@ -25,12 +25,12 @@
   "logicalOperator": "AND",
   "criteriaList": [
     {
-      "expVal": "string",
-      "expType": "EQ",
-      "filterType": "string",
-      "caseSensitive": true,
+      "expVal": ".*",
+      "expType": "RXEQ",
+      "filterType": "ContainerSpecsByContainerPlatformCluster",
+      "caseSensitive": false,
       "entityType": "string",
-      "singleLine": true
+      "singleLine": false
     }
   ],
   "memberUuidList": [
