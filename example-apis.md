@@ -6,7 +6,7 @@ curl -X 'POST' \
   'https://nginx-turbonomic.apps.turbo.szesto.io/vmturbo/rest/groups' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
-  -d '{  "displayName": "api-group-container-spec-1",
+  -d '{ "displayName": "api-group-container-spec-1",
   "className": "Group",
   "groupType": "ContainerSpec",
   "environmentType": "HYBRID",
@@ -18,7 +18,6 @@ curl -X 'POST' \
       "expType": "RXEQ",
       "filterType": "containerSpecsByContainerPlatformCluster",
       "caseSensitive": false,
-      "entityType": "ContainerSpec",
       "singleLine": false
     }
   ],
