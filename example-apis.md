@@ -13,7 +13,7 @@
     {
       "expVal": ".*",
       "expType": "RXEQ",
-      "filterType": "ContainerSpecsByContainerPlatformCluster",
+      "filterType": "containerSpecsByContainerPlatformCluster",
       "caseSensitive": false,
       "entityType": "string",
       "singleLine": false
