@@ -155,38 +155,143 @@ curl -X 'PUT' \
 ****work in progress...****</br>
 ```
 {
-    "displayName": "api-policy-container-spec-1",
+    "uuid": "287473450564496",
+    "displayName": "mmmmmm",
     "entityType": "ContainerSpec",
+    "scopes": [
+        {
+            "uuid": "287472263631520",
+            "displayName": "api-group-container-spec-1",
+            "isStatic": true,
+            "logicalOperator": "AND",
+            "groupClassName": "GroupApiDTO"
+        }
+    ],
     "settingsManagers": [
         {
             "uuid": "marketsettingsmanager",
             "displayName": "Operational Constraints",
-            "className": "string",
             "category": "Analysis",
             "settings": [
                 {
+                    "uuid": "RATE_OF_RESIZE",
+                    "displayName": "Rate of Resize",
+                    "value": "3.0",
+                    "defaultValue": "3.0",
+                    "categories": [
+                        "resizeRecommendationsConstants"
+                    ],
+                    "valueType": "NUMERIC",
+                    "valueObjectType": "String",
+                    "min": 1,
+                    "max": 3,
+                    "entityType": "ContainerSpec"
+                },
+                {
+                    "uuid": "usedIncrement_Container_VMEM_Request",
+                    "displayName": "Increment constant for VMEM Request [MB]",
+                    "value": "16.0",
+                    "defaultValue": "16.0",
+                    "categories": [
+                        "resizeRecommendationsConstants"
+                    ],
+                    "valueType": "NUMERIC",
+                    "valueObjectType": "String",
+                    "min": 0,
+                    "max": 1000000,
+                    "entityType": "ContainerSpec"
+                },
+                {
                     "uuid": "minObservationPeriodContainerSpec",
                     "displayName": "Min Observation Period",
+                    "value": "1.0",
                     "defaultValue": "1.0",
                     "categories": [
                         "resizeRecommendationsConstants"
                     ],
                     "valueType": "NUMERIC",
-                    "value": "1.0",
                     "valueObjectType": "String",
                     "min": 0,
                     "max": 90,
+                    "entityType": "ContainerSpec"
+                },
+                {
+                    "uuid": "usedIncrement_Container_VCPU_Request",
+                    "displayName": "Increment constant for VCPU Request [mCores]",
+                    "value": "10.0",
+                    "defaultValue": "10.0",
+                    "categories": [
+                        "resizeRecommendationsConstants"
+                    ],
+                    "valueType": "NUMERIC",
+                    "valueObjectType": "String",
+                    "min": 0,
+                    "max": 1000000,
+                    "entityType": "ContainerSpec"
+                },
+                {
+                    "uuid": "usedIncrement_Container_VMEM",
+                    "displayName": "Increment constant for VMEM Limit [MB]",
+                    "value": "128.0",
+                    "defaultValue": "128.0",
+                    "categories": [
+                        "resizeRecommendationsConstants"
+                    ],
+                    "valueType": "NUMERIC",
+                    "valueObjectType": "String",
+                    "min": 0,
+                    "max": 1000000,
+                    "entityType": "ContainerSpec"
+                },
+                {
+                    "uuid": "maxObservationPeriodContainerSpec",
+                    "displayName": "Max Observation Period",
+                    "value": "30.0",
+                    "defaultValue": "30.0",
+                    "categories": [
+                        "resizeRecommendationsConstants"
+                    ],
+                    "valueType": "NUMERIC",
+                    "valueObjectType": "String",
+                    "min": 7,
+                    "max": 90,
+                    "entityType": "ContainerSpec"
+                },
+                {
+                    "uuid": "percentileAggressivenessContainerSpec",
+                    "displayName": "Aggressiveness",
+                    "value": "99.0",
+                    "defaultValue": "99.0",
+                    "categories": [
+                        "resizeRecommendationsConstants"
+                    ],
+                    "valueType": "NUMERIC",
+                    "valueObjectType": "String",
+                    "min": 90,
+                    "max": 100,
+                    "entityType": "ContainerSpec"
+                },
+                {
+                    "uuid": "usedIncrement_Container_VCPU",
+                    "displayName": "Increment constant for VCPU Limit [mCores]",
+                    "value": "100.0",
+                    "defaultValue": "100.0",
+                    "categories": [
+                        "resizeRecommendationsConstants"
+                    ],
+                    "valueType": "NUMERIC",
+                    "valueObjectType": "String",
+                    "min": 0,
+                    "max": 1000000,
                     "entityType": "ContainerSpec"
                 }
             ]
         }
     ],
     "disabled": false,
-    "note": "note 1",
     "readOnly": false,
     "default": false
 }
-
 ```
 
 **Update Policy**<br/>
