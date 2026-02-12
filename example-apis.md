@@ -173,6 +173,20 @@ curl -X 'PUT' \
         "category": "Analysis",
         "settings": [
           {
+            "uuid": "minObservationPeriodContainerSpec",
+            "displayName": "Min Observation Period",
+            "value": "1.0",
+            "defaultValue": "1.0",
+            "categories": [
+              "resizeRecommendationsConstants"
+            ],
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 0,
+            "max": 90,
+            "entityType": "ContainerSpec"
+          },
+          {
             "uuid": "resizeVmemRequestMaxThreshold",
             "displayName": "VMEM Request Resize Max Threshold (in MB)",
             "value": "1048576.0",
@@ -184,10 +198,107 @@ curl -X 'PUT' \
             "entityType": "ContainerSpec"
           },
           {
+            "uuid": "usedIncrement_Container_VMEM",
+            "displayName": "Increment constant for VMEM Limit [MB]",
+            "value": "128.0",
+            "defaultValue": "128.0",
+            "categories": [
+              "resizeRecommendationsConstants"
+            ],
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 0,
+            "max": 1000000,
+            "entityType": "ContainerSpec"
+          },
+          {
             "uuid": "resizeVcpuLimitMaxThreshold",
             "displayName": "VCPU Limit Resize Max Threshold (in mCores)",
             "value": "64000.0",
             "defaultValue": "64000.0",
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 0,
+            "max": 1000000,
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "percentileAggressivenessContainerSpec",
+            "displayName": "Aggressiveness",
+            "value": "99.0",
+            "defaultValue": "99.0",
+            "categories": [
+              "resizeRecommendationsConstants"
+            ],
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 90,
+            "max": 100,
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "resizeVmemRequestMinThreshold",
+            "displayName": "VMEM Request Resize Min Threshold (in MB)",
+            "value": "10.0",
+            "defaultValue": "10.0",
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 0,
+            "max": 1048576,
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "resizeVcpuLimitMinThreshold",
+            "displayName": "VCPU Limit Resize Min Threshold (in mCores)",
+            "value": "500.0",
+            "defaultValue": "500.0",
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 0,
+            "max": 1000000,
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "vmemRequestToleranceContainerSpec",
+            "displayName": "VMEM Request Target Utilization (in %)",
+            "value": "110.0",
+            "defaultValue": "110.0",
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 10,
+            "max": 190,
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "resizeVmemLimitMaxThreshold",
+            "displayName": "VMEM Limit Resize Max Threshold (in MB)",
+            "value": "1048576.0",
+            "defaultValue": "1048576.0",
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 0,
+            "max": 1048576,
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "vcpuLimitToleranceContainerSpec",
+            "displayName": "VCPU Limit Target Utilization (in %)",
+            "value": "70.0",
+            "defaultValue": "70.0",
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 10,
+            "max": 90,
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "usedIncrement_Container_VCPU",
+            "displayName": "Increment constant for VCPU Limit [mCores]",
+            "value": "100.0",
+            "defaultValue": "100.0",
+            "categories": [
+              "resizeRecommendationsConstants"
+            ],
             "valueType": "NUMERIC",
             "valueObjectType": "String",
             "min": 0,
@@ -206,14 +317,17 @@ curl -X 'PUT' \
             "entityType": "ContainerSpec"
           },
           {
-            "uuid": "resizeVmemRequestMinThreshold",
-            "displayName": "VMEM Request Resize Min Threshold (in MB)",
-            "value": "10.0",
-            "defaultValue": "10.0",
+            "uuid": "RATE_OF_RESIZE",
+            "displayName": "Rate of Resize",
+            "value": "3.0",
+            "defaultValue": "3.0",
+            "categories": [
+              "resizeRecommendationsConstants"
+            ],
             "valueType": "NUMERIC",
             "valueObjectType": "String",
-            "min": 0,
-            "max": 1048576,
+            "min": 1,
+            "max": 3,
             "entityType": "ContainerSpec"
           },
           {
@@ -221,17 +335,6 @@ curl -X 'PUT' \
             "displayName": "VCPU Request Resize Min Threshold (in mCores)",
             "value": "10.0",
             "defaultValue": "10.0",
-            "valueType": "NUMERIC",
-            "valueObjectType": "String",
-            "min": 0,
-            "max": 1000000,
-            "entityType": "ContainerSpec"
-          },
-          {
-            "uuid": "resizeVcpuLimitMinThreshold",
-            "displayName": "VCPU Limit Resize Min Threshold (in mCores)",
-            "value": "500.0",
-            "defaultValue": "500.0",
             "valueType": "NUMERIC",
             "valueObjectType": "String",
             "min": 0,
@@ -272,17 +375,6 @@ curl -X 'PUT' \
             "entityType": "ContainerSpec"
           },
           {
-            "uuid": "vmemRequestToleranceContainerSpec",
-            "displayName": "VMEM Request Target Utilization (in %)",
-            "value": "110.0",
-            "defaultValue": "110.0",
-            "valueType": "NUMERIC",
-            "valueObjectType": "String",
-            "min": 10,
-            "max": 190,
-            "entityType": "ContainerSpec"
-          },
-          {
             "uuid": "vmemLimitToleranceContainerSpec",
             "displayName": "VMEM Limit Target Utilization (in %)",
             "value": "70.0",
@@ -294,25 +386,45 @@ curl -X 'PUT' \
             "entityType": "ContainerSpec"
           },
           {
-            "uuid": "resizeVmemLimitMaxThreshold",
-            "displayName": "VMEM Limit Resize Max Threshold (in MB)",
-            "value": "1048576.0",
-            "defaultValue": "1048576.0",
+            "uuid": "maxObservationPeriodContainerSpec",
+            "displayName": "Max Observation Period",
+            "value": "30.0",
+            "defaultValue": "30.0",
+            "categories": [
+              "resizeRecommendationsConstants"
+            ],
             "valueType": "NUMERIC",
             "valueObjectType": "String",
-            "min": 0,
-            "max": 1048576,
+            "min": 7,
+            "max": 90,
             "entityType": "ContainerSpec"
           },
           {
-            "uuid": "vcpuLimitToleranceContainerSpec",
-            "displayName": "VCPU Limit Target Utilization (in %)",
-            "value": "70.0",
-            "defaultValue": "70.0",
+            "uuid": "usedIncrement_Container_VCPU_Request",
+            "displayName": "Increment constant for VCPU Request [mCores]",
+            "value": "10.0",
+            "defaultValue": "10.0",
+            "categories": [
+              "resizeRecommendationsConstants"
+            ],
             "valueType": "NUMERIC",
             "valueObjectType": "String",
-            "min": 10,
-            "max": 90,
+            "min": 0,
+            "max": 1000000,
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "usedIncrement_Container_VMEM_Request",
+            "displayName": "Increment constant for VMEM Request [MB]",
+            "value": "16.0",
+            "defaultValue": "16.0",
+            "categories": [
+              "resizeRecommendationsConstants"
+            ],
+            "valueType": "NUMERIC",
+            "valueObjectType": "String",
+            "min": 0,
+            "max": 1000000,
             "entityType": "ContainerSpec"
           }
         ]
@@ -345,44 +457,6 @@ curl -X 'PUT' \
               {
                 "label": "Manual",
                 "value": "MANUAL"
-              }
-            ],
-            "entityType": "ContainerSpec"
-          },
-          {
-            "uuid": "resizeVmemRequestAboveMaxThreshold",
-            "displayName": "VMEM Request Resize Above Max",
-            "value": "RECOMMEND",
-            "defaultValue": "RECOMMEND",
-            "valueType": "STRING",
-            "valueObjectType": "String",
-            "options": [
-              {
-                "label": "Disabled",
-                "value": "DISABLED"
-              },
-              {
-                "label": "Recommend",
-                "value": "RECOMMEND"
-              }
-            ],
-            "entityType": "ContainerSpec"
-          },
-          {
-            "uuid": "resizeVcpuRequestAboveMaxThreshold",
-            "displayName": "VCPU Request Resize Above Max",
-            "value": "RECOMMEND",
-            "defaultValue": "RECOMMEND",
-            "valueType": "STRING",
-            "valueObjectType": "String",
-            "options": [
-              {
-                "label": "Disabled",
-                "value": "DISABLED"
-              },
-              {
-                "label": "Recommend",
-                "value": "RECOMMEND"
               }
             ],
             "entityType": "ContainerSpec"
@@ -426,25 +500,6 @@ curl -X 'PUT' \
             "entityType": "ContainerSpec"
           },
           {
-            "uuid": "resizeVcpuRequestBelowMinThreshold",
-            "displayName": "VCPU Request Resize Below Min",
-            "value": "RECOMMEND",
-            "defaultValue": "RECOMMEND",
-            "valueType": "STRING",
-            "valueObjectType": "String",
-            "options": [
-              {
-                "label": "Disabled",
-                "value": "DISABLED"
-              },
-              {
-                "label": "Recommend",
-                "value": "RECOMMEND"
-              }
-            ],
-            "entityType": "ContainerSpec"
-          },
-          {
             "uuid": "resizeVmemLimitBelowMinThreshold",
             "displayName": "VMEM Limit Resize Below Min",
             "value": "RECOMMEND",
@@ -466,6 +521,63 @@ curl -X 'PUT' \
           {
             "uuid": "resizeVmemLimitAboveMaxThreshold",
             "displayName": "VMEM Limit Resize Above Max",
+            "value": "RECOMMEND",
+            "defaultValue": "RECOMMEND",
+            "valueType": "STRING",
+            "valueObjectType": "String",
+            "options": [
+              {
+                "label": "Disabled",
+                "value": "DISABLED"
+              },
+              {
+                "label": "Recommend",
+                "value": "RECOMMEND"
+              }
+            ],
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "resizeVmemRequestAboveMaxThreshold",
+            "displayName": "VMEM Request Resize Above Max",
+            "value": "RECOMMEND",
+            "defaultValue": "RECOMMEND",
+            "valueType": "STRING",
+            "valueObjectType": "String",
+            "options": [
+              {
+                "label": "Disabled",
+                "value": "DISABLED"
+              },
+              {
+                "label": "Recommend",
+                "value": "RECOMMEND"
+              }
+            ],
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "resizeVcpuRequestAboveMaxThreshold",
+            "displayName": "VCPU Request Resize Above Max",
+            "value": "RECOMMEND",
+            "defaultValue": "RECOMMEND",
+            "valueType": "STRING",
+            "valueObjectType": "String",
+            "options": [
+              {
+                "label": "Disabled",
+                "value": "DISABLED"
+              },
+              {
+                "label": "Recommend",
+                "value": "RECOMMEND"
+              }
+            ],
+            "entityType": "ContainerSpec"
+          },
+          {
+            "uuid": "resizeVcpuRequestBelowMinThreshold",
+            "displayName": "VCPU Request Resize Below Min",
             "value": "RECOMMEND",
             "defaultValue": "RECOMMEND",
             "valueType": "STRING",
