@@ -159,8 +159,8 @@ curl -X 'PUT' \
     "entityType": "ContainerSpec",
     "scopes": [
       {
-        "uuid": "287462782348768",
-        "displayName": "a",
+        "uuid": "287472263631520",
+        "displayName": "api-group-container-spec-1",
         "isStatic": true,
         "logicalOperator": "AND",
         "groupClassName": "GroupApiDTO"
