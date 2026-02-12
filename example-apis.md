@@ -152,7 +152,41 @@ curl -X 'PUT' \
 
 ***EntityType: ContainerSpec***<br/>
 
+****work in progress...****</br>
 ```
+{
+    "displayName": "api-policy-container-spec-1",
+    "entityType": "ContainerSpec",
+    "settingsManagers": [
+        {
+            "uuid": "marketsettingsmanager",
+            "displayName": "Operational Constraints",
+            "className": "string",
+            "category": "Analysis",
+            "settings": [
+                {
+                    "uuid": "minObservationPeriodContainerSpec",
+                    "displayName": "Min Observation Period",
+                    "defaultValue": "1.0",
+                    "categories": [
+                        "resizeRecommendationsConstants"
+                    ],
+                    "valueType": "NUMERIC",
+                    "value": "1.0",
+                    "valueObjectType": "String",
+                    "min": 0,
+                    "max": 90,
+                    "entityType": "ContainerSpec"
+                }
+            ]
+        }
+    ],
+    "disabled": false,
+    "note": "note 1",
+    "readOnly": false,
+    "default": false
+}
+
 ```
 
 **Update Policy**<br/>
