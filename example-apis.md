@@ -158,7 +158,6 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-    "uuid": "287473985418640",
     "displayName": "mmmm",
     "entityType": "ContainerSpec",
     "scopes": [
