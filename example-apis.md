@@ -158,7 +158,7 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-    "displayName": "mmmm",
+    "displayName": "api-policy-container-spec-analysis-1",
     "entityType": "ContainerSpec",
     "scopes": [
         {
