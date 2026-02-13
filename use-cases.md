@@ -115,7 +115,7 @@ schedule: action execution schedule 2
 
 ***Deployment automaiton***</br>
 
-Container resize custom resource.<br/>
-
 Turbonomic api's.<br/>
+
+See `example-apis.md`.<br/>
 
