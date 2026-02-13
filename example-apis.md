@@ -152,9 +152,12 @@ curl -X 'PUT' \
 
 ***EntityType: ContainerSpec***<br/>
 
-****work in progress...****</br>
 ```
-{
+curl -X 'POST' \
+  'https://nginx-turbonomic.apps.turbo.szesto.io/vmturbo/rest/settingspolicies' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
     "uuid": "287473985418640",
     "displayName": "mmmm",
     "entityType": "ContainerSpec",
@@ -620,7 +623,7 @@ curl -X 'PUT' \
     "disabled": false,
     "readOnly": false,
     "default": false
-}
+}'
 ```
 
 **Update Policy**<br/>
